@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Teater</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="background">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <h1>Teater Studio Ghibli</h1>
+        <p>Teater Studio Ghibli adalah teater yang menampilkan animasi dari studio paling terkenal di Jepang menjadi sebuah pertunjukkan teater.</p>
+
+        <div class="form-box">
+            <h2>Form Pemesanan Tiket Teater</h2>
+            <form id="ticketForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="phone">Nomor HP:</label>
+                <input type="text" id="phone" name="phone" required><br>
+
+                <label for="date">Pilih Tanggal:</label>
+                <select id="date" name="date" required>
+                    <option value="2024-05-26">26 Mei 2024</option>
+                    <option value="2024-06-02">2 Juni 2024</option>
+                    <option value="2024-06-09">9 Juni 2024</option>
+                </select><br>
+
+                <label style="margin-left: -250px;" for="ticketType">Jenis Tiket:</label><br>
+                <input style="margin-left: -50;" type="checkbox" id="regular" name="ticketType" value="Regular"><label for="regular">Regular</label><br>
+                <input type="checkbox" id="vip" name="ticketType" value="VIP"><label for="vip">VIP</label><br>
+                <input type="checkbox" id="vvip" name="ticketType" value="VVIP"><label for="vvip">VVIP</label><br>
+
+                <label for="jumlah">Jumlah Tiket:</label>
+                <input type="number" id="jumlah" name="jumlah" required><br><br>
+
+                <button style="color: black;" type="button" onclick="submitForm()">Pesan</button>
+            </form>
+        </div>
+    </div>
+    <script src="script/main.js"></script>
+</body>
+</html>
